@@ -3,4 +3,5 @@
 # Date: 10/05/2021
 # Description: script that names files 1,2,3.. following a order by date of created of the file
 # Date Modified: 10/05/2021
-find /home/carlos/carpeta_prueba/folder  
+a="ls -ltr /home/carlos/carpeta_prueba/folder"
+$a
