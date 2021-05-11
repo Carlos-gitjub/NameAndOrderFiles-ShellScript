@@ -11,11 +11,19 @@
 #echo $i
 #done
 
-x=$(ls -ltr /home/carlos/carpeta_prueba/folder | awk '{print $9}')   #guardamos en variable el out del comando (su columna 9)
+echo "Introduce the absolute path of the folder: "
+read absolute_path
+if [ -e $absolute_path ]
+then
+  x=$(ls -ltr $absolute_path | awk '{print $9}')   #guardamos en variable los nombres de los archivos(columna 9)
+  num=1
+  for i in $x
+  do
+  mv $absolute_path/$i $absolute_path/$num
+  num=$((num+1))
+  done
+else
+  echo File does not exist
+fi
 
-num=1
-for i in $x
-do
-mv /home/carlos/carpeta_prueba/folder/$i /home/carlos/carpeta_prueba/folder/$num
-num=$((num+1))
-done
+
