@@ -4,7 +4,11 @@
 # Description: script that names files 1,2,3.. following a order by date of created of the file
 # Date Modified: 10/05/2021
 
-x=$(ls -ltr /home/carlos/carpeta_prueba/folder | awk '{print $6,$7,$8,$9}')   #guardamos en variable el out del comando (sus lineas 6,7,8,9)
+x=$(ls -ltr /home/carlos/carpeta_prueba/folder | awk '{print $9}')   #guardamos en variable el out del comando (su columna 9)
 
-echo "The value of the variable is: $x"
+for i in $x
+do
+echo $i
+done
+
 
