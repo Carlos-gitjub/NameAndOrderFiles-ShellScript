@@ -15,3 +15,12 @@ How do I build it? brief plan...
 -Skillshare access the created date
 -Get all the files and order them in descendent manner by date
 -Then start by naming in that specific order (the last one "1", etc)
+
+
+Alternatives case 1:
+
+-show all the files dates of creation and then reads the output and sorts it by date
+     parts:
+         read output
+-
+

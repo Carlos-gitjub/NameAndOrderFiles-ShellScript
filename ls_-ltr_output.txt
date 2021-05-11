@@ -1,0 +1,5 @@
+total 0
+-rw-rw-r-- 1 carlos carlos 0 may 10 00:31 pepe
+-rw-rw-r-- 1 carlos carlos 0 may 10 00:31 paco
+-rw-rw-r-- 1 carlos carlos 0 may 10 00:31 pedro
+-rw-rw-r-- 1 carlos carlos 0 may 10 01:08 otra
