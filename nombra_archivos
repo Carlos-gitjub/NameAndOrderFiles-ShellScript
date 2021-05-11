@@ -2,28 +2,19 @@
 # Author: Carlos Antón
 # Date: 10/05/2021
 # Description: script that names files 1,2,3.. following a order by date of created of the file
-# Date Modified: 10/05/2021
-
-#x=$(ls -ltr /home/carlos/carpeta_prueba/folder | awk '{print $9}')   #guardamos en variable el out del comando (su columna 9)
-
-#for i in $x
-#do
-#echo $i
-#done
+# Date Modified: 11/05/2021
 
 echo "Introduce the absolute path of the folder: "
 read absolute_path
-if [ -e $absolute_path ]
+if [ -e $absolute_path ]                               #checks if the file exists
 then
-  x=$(ls -ltr $absolute_path | awk '{print $9}')   #guardamos en variable los nombres de los archivos(columna 9)
+  x=$(ls -ltr $absolute_path | awk '{print $9}')       #assign the names of the files to a variable
   num=1
-  for i in $x
+  for i in $x                                          #iterates through all the names
   do
-  mv $absolute_path/$i $absolute_path/$num
+  mv $absolute_path/$i $absolute_path/$num             #changes name 
   num=$((num+1))
   done
 else
   echo File does not exist
 fi
-
-
